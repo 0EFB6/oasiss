@@ -2,9 +2,10 @@ import { HardhatUserConfig } from "hardhat/config";
 import "@oasisprotocol/sapphire-hardhat";
 import "@nomicfoundation/hardhat-toolbox";
 import "./tasks";
+import dotenv from "dotenv";
 
 const accounts = process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : {
-  mnemonic: "differ ship image shaft harsh member ski comfort cotton wire exit dismiss",
+  mnemonic: process.env.MNEMONIC || "default mnemonic",
   path: "m/44'/60'/0'/0",
   initialIndex: 0,
   count: 20,
