@@ -4,6 +4,8 @@ import "@nomicfoundation/hardhat-toolbox";
 import "./tasks";
 import dotenv from "dotenv";
 
+dotenv.config();
+
 const accounts = process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : {
   mnemonic: process.env.MNEMONIC || "default mnemonic",
   path: "m/44'/60'/0'/0",
